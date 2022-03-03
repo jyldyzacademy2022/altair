@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  border: 1px solid yellow;
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 15px 30px;
+  background-color: #ccc;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+}
+
+.menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 15px 15px;
+  list-style: none;
+  background-color: black;
+  width: 100%;
+}
+
+.menu li {
+  padding: 10px 0;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-show {
+  display: flex;
+}
+
+.about-col img {
+  width: 100%;
+}
+
+.features {
+  text-align: center;
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features-list li {
+  border: 1px solid black;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.news {
+  text-align: center;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+}
+
+.news-list li {
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.news-list img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.footer {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-inner {
+    display: flex;
+    gap: 15px;
+  }
+
+  .about-col {
+    width: 50%;
+  }
+
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .features-list li {
+    width: 48%;
+    margin-bottom: 0;
+  }
+
+  .news-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background-color: #fff;
+  }
+
+  .menu a {
+    padding: 15px 30px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  .features-list {
+    justify-content: center;
+  }
+  .features-list li {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .news-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
